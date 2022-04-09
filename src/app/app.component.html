@@ -1,50 +1,57 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-end">
-  <a class="navbar-brand" routerLink="/">{{title}}</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-darkmode fixed-top navbar-inverse">
+  <a class="navbar-brand" routerLink="/"><i>{{title}}</i></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" routerLink="/about" (click)="setTitle('Ciaran Web - About')">About</a>
+        <a class="nav-link" routerLink="/about">About</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link" #navbarDropdown  routerLink="/projects" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Projects
+        </a>
+        <div class="dropdown-menu bg-darkmode" *ngIf="screenWidth > 992" (mouseover)="onHover=true" (mouseout)="onHover=false" (mouseover)="dropdownHover(navbarDropdown)"  (mouseout)="dropdownHover(navbarDropdown)">
+          <a class="dropdown-item" routerLink="" *ngFor="let row of threeprojectsdata" (click)="reloadpage('/project/:'+row[0])">{{row[1]}}</a>
+        </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/code" (click)="setTitle('Ciaran Web - Code')">Code</a>
+        <a class="nav-link" routerLink="/blog">Blog</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/blog" (click)="setTitle('Ciaran Web - Blog')">Blog</a>
+        <a class="nav-link" routerLink="/code">Code Examples</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/login" (click)="setTitle('Ciaran Web - Login')">Login</a>
+      <li class="nav-item" *ngIf="loggedIn === false">
+        <a class="nav-link" routerLink="/login">Login</a>
+      </li>
+      <li class="nav-item" *ngIf="loggedIn === true">
+        <a class="nav-link" routerLink="" (click)="logout()">Logout</a>
+      </li>
+      <li class="nav-item" *ngIf="loggedIn === true">
       </li>
     </ul>
   </div>
 </nav>
-
-
 <router-outlet></router-outlet>
-
-<footer class="text-center text-white fixed-bottom bg-light">
+<footer class="text-center text-white fixed-bottom bg-darkmode">
   <ul class="nav justify-content-center">
     <li class="nav-item">
       <a class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="https://github.com/Ciaran98" role="button" target="_blank" data-mdb-ripple-color="dark">
-        <img src="../assets/github.svg" alt="github" width="32" height="32" class="svg-link">
+        href="https://github.com/Ciaran98" role="button" target="_blank" data-mdb-ripple-color="dark"><i class="bi bi-github" style="font-size: 20px; color: #68ad7e;"></i>
       </a>
     </li>
     <li class="nav-item">
       <a class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="https://www.linkedin.com/in/ciaran-melarkey-694469194/" target="_blank" role="button" data-mdb-ripple-color="dark">
-        <img src="../assets/linkedin.svg" alt="linkedin" width="32" height="32" class="svg-link">
+        href="https://www.linkedin.com/in/ciaran-melarkey-694469194/" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="bi bi-linkedin" style="font-size: 20px; color: #68ad7e;"></i>
       </a>
     </li>
     <li class="nav-item">
       <a class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="mailto:ciaran.melarkey@hotmail.com" role="button" data-mdb-ripple-color="dark">
-        <img src="../assets/envelope-fill.svg" alt="email" width="32" height="32" class="svg-link">
+        href="mailto:ciaran.melarkey@hotmail.com" role="button" data-mdb-ripple-color="dark"><i class="bi bi-envelope-fill" style="font-size: 20px; color: #68ad7e;"></i>
       </a>
     </li>
-
+    
   </ul>
 </footer>
 

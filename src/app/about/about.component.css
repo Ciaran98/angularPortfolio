@@ -1,0 +1,9 @@
+#container{
+}
+#img-float-right{
+    float: right;
+}
+
+img {
+    border-radius: 50%;
+  }

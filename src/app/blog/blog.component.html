@@ -1,1 +1,13 @@
-<p>blog works!</p>
+<div class="container">
+    <div class="row align-items-md-stretch">
+        <div class="col-md-4"  *ngFor="let row of blogdata">
+            <div class="h-100 p-5 text-white bg-dark rounded-3">
+              <h3>{{row[1]}}</h3>
+              <p>{{row[2]}}</p>
+              <p>Post by: {{row[4]}}</p>
+              <p>Posted on: {{row[3]}}</p>
+              <a routerLink="/blog_post/:{{row[0]}}"><button class="btn btn-outline-success" type="button">View Post</button></a>
+            </div>
+          </div>
+    </div>
+</div>

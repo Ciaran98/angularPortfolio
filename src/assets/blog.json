@@ -1,0 +1,22 @@
+[
+    {
+        "blogname":"The First Post",
+        "blogdata":{
+            "blogtitle":"First Blog",
+            "blogdescription":"This is the first blog",
+            "blogtext":"This is the blog text",
+            "blogtags":["tag1","tag2","tag3"]
+        },
+        "blogindex":1
+    },
+    {
+        "blogname":"The Second Post",
+        "blogdata":{
+            "blogtitle":"Second Blog",
+            "blogdescription": "This is the first blog",
+            "blogtext" : "this is the blog text",
+            "blogtags":["tag1","tag2","tag3"]
+        },
+        "blogindex":2
+    }
+]

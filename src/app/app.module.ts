@@ -10,7 +10,13 @@ import { LoginComponent } from './login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CodeComponent } from './code/code.component';
 import { BlogComponent } from './blog/blog.component';
-
+import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http'
+import { GetDBContentService } from './get-db-content.service';
+import { BlogPostComponent } from './blog-post/blog-post.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ProjectDisplayComponent } from './project-display/project-display.component';
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,16 +25,25 @@ import { BlogComponent } from './blog/blog.component';
     AboutComponent,
     LoginComponent,
     CodeComponent,
-    BlogComponent
+    BlogComponent,
+    BlogPostComponent,
+    ProjectsComponent,
+    ProjectDisplayComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    HttpClientModule,
+    RouterModule,
+    ReactiveFormsModule
   ],
   providers: [
-    Title
+    Title,
+    GetDBContentService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports:[FormsModule]
 })
 export class AppModule { }

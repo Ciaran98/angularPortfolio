@@ -1,0 +1,67 @@
+<!-- Modal -->
+  <div class="modal fade" id="createAccountModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content bg-darkmode">
+        <div class="modal-header">
+          <h5 class="modal-title" id="createAccountLabel">Create New Account</h5>
+        </div>
+        <div class="modal-body">
+            <form #newAccountForm="ngForm" (ngSubmit)="newAccoutSubmission(newAccountForm)" name="newAccountForm">
+                <ul class="alert alert-danger warning-list  pl-5">
+                  <li *ngIf="email.touched && email.invalid" w="b">Email Invalid Bozo</li>
+                  <li *ngIf="username.touched && username.invalid">Username Invalid Bozo</li>
+                  <li *ngIf="password.touched && password.invalid">Password Invalid Bozo</li>
+                  <li *ngIf="confirmpassword.touched && confirmpassword.invalid">Password match Invalid Bozo</li>
+                  <li *ngIf="confirmpassword.value !== password.value && confirmpassword.touched">Passwords do not match</li>
+                  <li *ngIf="this.error == true">This email is already in use bozo</li>
+                </ul>
+                <div class="form-group">
+                  <label for="newAccountEmail">Email address</label>
+                  <input type="email" class="form-control" id="newAccountEmail" placeholder="Enter email" ngModel  #email="ngModel" name="email" required minlength="8"/>
+                </div>
+                <div class="form-group">
+                  <label for="newAccountUsername">Username</label>
+                  <input type="username" class="form-control" id="newAccountUsername" placeholder="Username" ngModel  #username="ngModel" name="username" autocomplete="on" required minlength="8"/>
+                </div>
+                <div class="form-group">
+                  <label for="newAccountPassword">Password</label>
+                  <input type="password" class="form-control" id="newAccountPassword" placeholder="Password" ngModel #password="ngModel" name="password" autocomplete="on" required minlength="8"/>
+                </div>
+                <div class="form-group">
+                  <label for="newAccountConfirmPassword">Confirm Password</label>
+                  <input type="password" class="form-control" id="newAccountConfirmPassword" placeholder="Confirm Password" ngModel  #confirmpassword="ngModel" name="confirmpassword" autocomplete="on" required minlength="8"/>
+                </div>
+                <button type="submit" class="btn btn-primary" [disabled]="email.invalid || username.invalid || password.invalid || confirmpassword.invalid">Create Account</button>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+  <div class="container">
+    <div class="rounded-3">
+      <div class="container-fluid">
+        <div class="container ">
+          <form #loginForm="ngForm" (ngSubmit)="loginSubmission(loginForm)">
+              <ul class="alert alert-danger warning-list pl-5">
+                <li *ngIf="loginemail.touched && loginemail.invalid">Email Invalid Bozo</li>
+                <li *ngIf="loginpassword.touched && loginpassword.invalid">Password Invalid Bozo</li>
+              </ul>
+            <div class="form-group">
+              <label for="loginEmail">Email address</label>
+              <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" placeholder="Enter email" ngModel required #loginemail="ngModel" name="email" minlength="8">
+            </div>
+            <div class="form-group">
+              <label for="loginPassword">Password</label>
+              <input type="password" class="form-control" id="loginPassword" placeholder="Password" ngModel  #loginpassword="ngModel" name="password" autocomplete="on" required minlength="8">
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="loginemail.invalid || loginpassword.invalid">Login</button>
+            <a class="btn btn-primary" data-toggle="modal" data-target="#createAccountModal">Create account</a>
+          </form>
+      </div>
+      </div>
+  </div>
+</div>

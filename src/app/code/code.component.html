@@ -1,25 +1,19 @@
-<div class="container py-4">
-<div class="row align-items-md-stretch">
-    <div class="col-md-4">
-      <div class="h-100 p-5 text-white bg-dark rounded-3">
-        <h2>Python Password Manager</h2>
-        <p>Password Manager built using Python. Encrypts passwords using the Cryptography package. GUI is built using the PyQt5 library.</p>
-        <button class="btn btn-outline-light" type="button" (click)="redirect('pword')">GitHub</button>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="h-100 p-5 bg-light border rounded-3 bg-dark text-white">
-        <h2>Add borders</h2>
-        <p>Simpler portfolio website only using HTML, CSS, and basic JavaScript</p>
-        <button class="btn btn-outline-light" type="button" (click)="redirect('oldSite')">GitHub</button>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="h-100 p-5 bg-pog border rounded-3" >
-        <h2>Add borders</h2>
-        <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
-        <button class="btn btn-outline-secondary" type="button">Example button</button>
-      </div>
+<div class="container-fluid">
+  <h3>Code Examples</h3>
+  <p>Welcome to the code examples, here you can check out some snippets of code from previous projects!</p>
+  <p>Please use the dropdown to select a snippet</p>
+  <form #snippetform="ngForm" (change)="selectsnippet(snippetform,snippetbox)">
+    <select id="select" ngModel #select="ngModel" name="snippetSelect">
+      <option value="default"> -- Select An Option -- </option>
+      <option *ngFor="let options of snippetdata" value="{{options['index']}}">{{options['name']}}</option>
+    </select>
+  </form>
+  <br>
+<div class="row">
+  <div class="col-12 col-md-8"><div class="rounded-3">
+    <div class=" code-snippet-box px-2 py-1" style="background-color: black;" #snippetbox [innerHTML]="selectedsnippet"></div>
     </div>
   </div>
+  <div class="col-6 col-md-4">{{snippetDescription}}</div>
+</div>
 </div>

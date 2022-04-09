@@ -1,0 +1,40 @@
+.snippet-keyword {
+	color: #c695c6 !important;
+}
+
+.snippet-operator {
+	color: #f97b58 !important;
+}
+
+.snippet-function {
+	color: #6699cc !important;
+}
+
+.snippet-string {
+	color: #99c794 !important;
+}
+
+.snippet-constant {
+	color: #ec5f66 !important;
+}
+
+.snippet-function-argument {
+	color: #f9ae58 !important;
+}
+
+.snippet-method {
+	color: #73bdb0 !important;
+}
+
+pre{
+	color: whitesmoke !important;
+}
+
+.code-snippet-box {
+	color: antiquewhite !important;
+	border: 2px solid #5ab874;;
+	border-radius: 4px;
+	display: none;
+	overflow: auto;
+	transition: max-height 0.2s ease-out;
+}

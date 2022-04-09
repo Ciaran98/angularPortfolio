@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="rounded-3">
+    <div class="container-fluid">
+      <h1 class="display-5 fw-bold">{{title}}</h1>
+      {{blogposttext}}
+    </div>
+    <div class="container-fluid" *ngFor="let row of commentdata">
+      <hr>
+          <p>{{row[2]}}: {{row[0]}} </p>
+            <p>{{row[1]}}</p>
+    </div>
+    <hr>
+    <form #postcomment="ngForm" *ngIf="loggedIn === true;else notloggedin" (ngSubmit)="commentSubmission(postcomment)" novalidate="">
+      <input type="text" ngModel  #comment="ngModel" id="newcomment" name="newcomment" required>
+      <input type="submit">
+    </form>
+    <ng-template #notloggedin>You are not signed in, please sign in <a routerLink="/login">here.</a></ng-template>
+  </div>
+</div>
+
