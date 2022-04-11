@@ -3,6 +3,7 @@
 body {
     padding-top: 70px;
     padding-bottom: 70px;
-    background-color: #30343d !important;
-    color: azure !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-family: 'Noto Sans', sans-serif !important;
 }

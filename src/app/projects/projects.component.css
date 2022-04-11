@@ -1,10 +1,20 @@
 .btn{
-    background-color: aliceblue;
+    background-color: white;
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
     font-size: 18px;
 }
 .btn:hover{
-    background-color:#68ad7e;
+    background-color:#0c76ed;
     color: aliceblue;
 }
+
+.project-item{
+    box-shadow: 10px 10px 20px #b8b8b8;
+    height: 300px;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+}
+
+.project-description{width: 60%;}

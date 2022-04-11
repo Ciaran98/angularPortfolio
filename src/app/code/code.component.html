@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="code-main-container">
   <h3>Code Examples</h3>
   <p>Welcome to the code examples, here you can check out some snippets of code from previous projects!</p>
   <p>Please use the dropdown to select a snippet</p>
@@ -9,11 +9,8 @@
     </select>
   </form>
   <br>
-<div class="row">
-  <div class="col-12 col-md-8"><div class="rounded-3">
+<div class="code-snippet-container">
     <div class=" code-snippet-box px-2 py-1" style="background-color: black;" #snippetbox [innerHTML]="selectedsnippet"></div>
-    </div>
-  </div>
-  <div class="col-6 col-md-4">{{snippetDescription}}</div>
+  <div class="code-snippet-description">{{snippetDescription}}</div>
 </div>
 </div>

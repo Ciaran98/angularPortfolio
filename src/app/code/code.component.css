@@ -29,12 +29,22 @@
 pre{
 	color: whitesmoke !important;
 }
-
 .code-snippet-box {
 	color: antiquewhite !important;
-	border: 2px solid #5ab874;;
+	border: 2px solid #0c76ed;;
 	border-radius: 4px;
 	display: none;
-	overflow: auto;
-	transition: max-height 0.2s ease-out;
+}
+@media (min-width: 992px){
+.code-snippet-box {
+	width: 65%;
+	}
+.code-snippet-description{
+}
+}
+
+.code-main-container{
+	margin-left: 9%;
+	margin-right: 9%;
+	width: auto;
 }

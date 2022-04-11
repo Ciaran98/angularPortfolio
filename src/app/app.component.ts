@@ -21,11 +21,6 @@ export class AppComponent {
 		const currenttime = currentdate.getTime()
 		const loggedData = JSON.parse(localStorage.getItem("Data")!)
 		this.screenWidth = window.innerWidth;
-		this.db.getProjects().subscribe(
-			res =>{
-				this.threeprojectsdata = res;
-			}
-		)
 		if(localStorage.getItem("Data") != null)
 		{
 			if(parseInt(loggedData["Expiration"]) < currenttime){
@@ -43,16 +38,6 @@ export class AppComponent {
 	}
 	public constructor(private titleService: Title,private renderer: Renderer2,private db : GetDBContentService,private router: Router, private activatedRoute: ActivatedRoute,private account: AccountService) {
 		this.onHover = false;
-	}
-	public dropdownHover(el: HTMLElement){
-		if(this.onHover == true && this.screenWidth > 992){
-			this.renderer.setStyle(el,'font-size','20px');
-			this.renderer.setStyle(el,'border-bottom-width','2px')
-		}
-		else if(this.onHover == false && this.screenWidth > 992){
-			this.renderer.setStyle(el,'font-size','16px');
-			this.renderer.setStyle(el,'border-bottom-width','0px')
-		}
 	}
 	// This method is used to actually refresh the page if a new project is selected from the projects dropdown.
 	public reloadpage(url){
