@@ -49,11 +49,19 @@
         font-size: 14px;
     }
     .nav-link-text{
-        transition: all .6s ease-in-out;
+        transition: all .6s ease-in .3s;
+        
         font-size: 0px;
     }
 }
 
   .footer{
       background-color: black;
+  }
+
+  .footer-item{
+    transition: transform 1s ease
+  }
+  .footer-item:hover{
+      transform: rotate(360deg);  
   }

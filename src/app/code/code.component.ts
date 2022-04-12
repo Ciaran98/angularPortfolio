@@ -19,19 +19,21 @@ export class CodeComponent implements OnInit {
     this.titleService.setTitle("Code Examples")
 
   }
-  selectsnippet(snippetform: NgForm,box:HTMLElement){
+  selectsnippet(snippetform: NgForm,box:HTMLElement,description:HTMLElement){
     if(snippetform.controls['snippetSelect'].value !="default"){
       this.selectValue=snippetform.controls['snippetSelect'].value;
       this.selectedsnippet=this.snippetdata[this.selectValue]['snippet'];
       this.snippetDescription=this.snippetdata[this.selectValue]['description'];
       this.renderer.setStyle(box,"display","block");
       this.renderer.setStyle(box,"overflow","auto");
+      this.renderer.setStyle(description,"display","block");
       //this.renderer.setStyle(box,"maxHeight",box.scrollHeight+"px");
     }
     else{
       this.selectedsnippet="";
       this.snippetDescription="";
       this.renderer.setStyle(box,"display","none");
+      this.renderer.setStyle(description,"display","none");
       //this.renderer.setStyle(box,"maxheight","");
     }
     

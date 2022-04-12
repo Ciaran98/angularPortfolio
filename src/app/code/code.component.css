@@ -34,15 +34,31 @@ pre{
 	border: 2px solid #0c76ed;;
 	border-radius: 4px;
 	display: none;
+	overflow: auto;
+	width: auto;
 }
-@media (min-width: 992px){
-.code-snippet-box {
-	width: 65%;
-	}
-.code-snippet-description{
-}
-}
+@media (min-width: 1500px){
 
+	.code-snippet-description{
+		width: 500px;
+		float: left;
+		text-align: left;
+		margin-right: 10px;
+	}
+}
+@media (max-width: 1500px){
+	.code-snippet-description{
+		margin-bottom: 10px;
+	}
+}
+.code-snippet-description{
+	padding: 10px;
+	border-style: solid;
+	border-radius: 5px;
+	border-color: #0c76ed;
+	display: none;
+	color: #001426;
+}
 .code-main-container{
 	margin-left: 9%;
 	margin-right: 9%;

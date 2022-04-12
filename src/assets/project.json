@@ -1,0 +1,12 @@
+[
+    {
+        "projectname":"Python Password Manager",
+        "projectdata":{
+            "projecttitle":"Password Manager",
+            "projectdescription":"This is the project page for the python password manager",
+            "projecttext":"This is the password manager text",
+            "projecttags":["tag1","tag2","tag3"]
+        },
+        "projectindex":1
+    }
+]

@@ -2,15 +2,15 @@
   <h3>Code Examples</h3>
   <p>Welcome to the code examples, here you can check out some snippets of code from previous projects!</p>
   <p>Please use the dropdown to select a snippet</p>
-  <form #snippetform="ngForm" (change)="selectsnippet(snippetform,snippetbox)">
+  <form #snippetform="ngForm" (change)="selectsnippet(snippetform,snippetbox,snippetdescription)">
     <select id="select" ngModel #select="ngModel" name="snippetSelect">
       <option value="default"> -- Select An Option -- </option>
       <option *ngFor="let options of snippetdata" value="{{options['index']}}">{{options['name']}}</option>
     </select>
   </form>
   <br>
-<div class="code-snippet-container">
+  <div class="code-snippet-container">
+    <div class="code-snippet-description" style="background-color: #a3d4ff;" #snippetdescription>{{snippetDescription}}</div>
     <div class=" code-snippet-box px-2 py-1" style="background-color: black;" #snippetbox [innerHTML]="selectedsnippet"></div>
-  <div class="code-snippet-description">{{snippetDescription}}</div>
-</div>
+  </div>
 </div>
