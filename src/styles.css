@@ -1,9 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
-    padding-top: 70px;
-    padding-bottom: 70px;
-    background-color: #ffffff !important;
-    color: #000000 !important;
+    background-color: #F8FFED;
+    opacity: 1;
+    background: linear-gradient(135deg, #B0C4B155 25%, transparent 25%) -25px 0/ 50px 50px, linear-gradient(225deg, #B0C4B1 25%, transparent 25%) -25px 0/ 50px 50px, linear-gradient(315deg, #B0C4B155 25%, transparent 25%) 0px 0/ 50px 50px, linear-gradient(45deg, #B0C4B1 25%, #F8FFED 25%) 0px 0/ 50px 50px;
+    color: #ffffff !important;
     font-family: 'Noto Sans', sans-serif !important;
+}
+
+html,body{
+    height: 100%;
 }

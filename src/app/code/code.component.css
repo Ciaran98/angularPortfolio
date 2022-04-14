@@ -31,11 +31,12 @@ pre{
 }
 .code-snippet-box {
 	color: antiquewhite !important;
-	border: 2px solid #0c76ed;;
+	border: 2px solid #4A5759;;
 	border-radius: 4px;
 	display: none;
 	overflow: auto;
 	width: auto;
+	font-size: 14px;
 }
 @media (min-width: 1500px){
 
@@ -55,12 +56,7 @@ pre{
 	padding: 10px;
 	border-style: solid;
 	border-radius: 5px;
-	border-color: #0c76ed;
+	border-color: #4A5759;
 	display: none;
-	color: #001426;
-}
-.code-main-container{
-	margin-left: 9%;
-	margin-right: 9%;
-	width: auto;
+	color: #ffffff;
 }

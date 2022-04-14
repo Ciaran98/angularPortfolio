@@ -1,20 +1,53 @@
 
+@media (min-width: 992px){
+  .headshot-img{
+    width: 250px;
+  }
+  .home-text-container{
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  .letters:hover{
+    transform: translate(0px,-20px);
+    text-shadow: #1a1919 3px 23px 1px;
+    
+  }
+  .home-qualification-text{
+    font-size: 25px;
+  }
+}
+@media (max-width:992px){
+  .headshot-img{
+    width: 200px;
+  }
+  .home-qualification-text{
+    font-size: 18px;
+  }
+  .home-name{
+    font-size: 30px;
+  }
+}
+@media (max-width:800px){
+  .home-qualification-text{
+    font-size: 15px;
+  }
+}
 .headshot-img{
-    display: block;
+  display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 250px;
+  transition: all .2s ease;
   border-radius: 50%;
 }
-@media (min-width: 769px){
-.home-text-container{
-  margin-left: 15%;
-  margin-right: 15%;
-}
+.home-qualification-text{
+  text-shadow: 2px 2px 1px #000000;
+  transition: all .2s ease;
 }
 .home-text{
   text-align: justify;
 }
-.home-qualification-text{
-  font-size: 25px;
+.letters{
+  cursor: default;
+  text-shadow: #1a1919 3px 3px 1px;
+  transition: all .2s ease-out;
 }

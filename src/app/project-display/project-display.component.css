@@ -1,9 +1,10 @@
 .icon-back{
-    color: #5ca2f3;
+    color: #B0C4B1;
     font-size: 30px;
     float: right;
+    transition: color .2s;
 
 }
 .icon-back:hover{
-    color: #0c76ed;
+    color: #4A5759;
 }

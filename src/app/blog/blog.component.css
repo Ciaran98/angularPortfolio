@@ -1,10 +1,20 @@
 .btn{
-    background-color: aliceblue;
+    background-color: white;
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
     font-size: 18px;
 }
 .btn:hover{
-    background-color:#68ad7e;
+    background-color:#4A5759;
     color: aliceblue;
 }
+
+.blog-item{
+    box-shadow: 10px 10px 20px #0f0f0f;
+    height: 300px;
+    border-style: solid;
+    border-color: #4A5759;
+    border-width: 3px;
+}
+
+.blog-description{width: 60%;}

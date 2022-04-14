@@ -15,12 +15,11 @@
 .navbar{
     /*background: linear-gradient(235deg, rgba(31,255,0,0) 8%, #0c76ed 8.1%, #0c76ed 94%, rgba(22,255,0,0) 94.1%);*/
     /*background: linear-gradient(240deg, #ff0000 10%, rgba(255,128,0,1) 20%, rgba(241,255,0,1) 30%, rgba(108,255,0,1) 40%, rgba(0,255,136,1) 50%, rgba(0,176,255,1) 60%, rgba(46,0,255,1) 70%, rgba(255,0,245,1) 80%, rgba(255,0,0,1) 90%);*/
-    background-color: black;
-    
+    background-color: #4A5759;
 }
 .vertical-center {
-    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-    min-height: 100vh; /* These two lines are counted as one :-)       */
+    min-height: 100%; 
+    min-height: 100vh; 
   
     display: flex;
     align-items: center;
@@ -50,13 +49,12 @@
     }
     .nav-link-text{
         transition: all .6s ease-in .3s;
-        
         font-size: 0px;
     }
 }
 
   .footer{
-      background-color: black;
+      background-color: #4A5759;
   }
 
   .footer-item{
