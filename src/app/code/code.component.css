@@ -35,22 +35,7 @@ pre{
 	border-radius: 4px;
 	display: none;
 	overflow: auto;
-	width: auto;
 	font-size: 14px;
-}
-@media (min-width: 1500px){
-
-	.code-snippet-description{
-		width: 500px;
-		float: left;
-		text-align: left;
-		margin-right: 10px;
-	}
-}
-@media (max-width: 1500px){
-	.code-snippet-description{
-		margin-bottom: 10px;
-	}
 }
 .code-snippet-description{
 	padding: 10px;
@@ -60,3 +45,8 @@ pre{
 	display: none;
 	color: #ffffff;
 }
+
+.container{
+	background-color: #F5CB5C;
+	box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  }
