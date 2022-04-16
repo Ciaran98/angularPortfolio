@@ -26,14 +26,12 @@ export class CodeComponent implements OnInit {
       this.snippetDescription=this.snippetdata[this.selectValue]['description'];
       this.renderer.setStyle(box,"display","block");
       this.renderer.setStyle(box,"overflow","auto");
-      this.renderer.setStyle(description,"display","block");
       //this.renderer.setStyle(box,"maxHeight",box.scrollHeight+"px");
     }
     else{
       this.selectedsnippet="";
       this.snippetDescription="";
       this.renderer.setStyle(box,"display","none");
-      this.renderer.setStyle(description,"display","none");
       //this.renderer.setStyle(box,"maxheight","");
     }
     

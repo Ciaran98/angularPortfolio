@@ -1,29 +1,43 @@
-
-@media (min-width: 992px){
+@media (max-width: 425px){
+  .home-header, .home-text{
+    font-size: 2vh;
+  }
+  .header-img{
+    height: 200px;
+    width: auto;
+  }
+  .home-padding{
+    padding-top: 30% !important;
+  }
+}
+@media (min-width: 1024px){
   .letters:hover{
     transform: translate(0px,-20px);
-    text-shadow: #1a1919 3px 23px 1px;
-  }
-  .home-qualification-text{
-
+    /*text-shadow: #1a1919 3px 23px 1px;*/
   }
 }
-@media (max-width:992px){
-  .home-qualification-text{
-
-  }
-}
-.home-qualification-text{
-  font-size: 1rem;
-  text-shadow: 2px 2px 1px #000000;
-  transition: all .2s ease;
+.home-header, .home-text{
+  font-size: 3vh;
 }
 .letters{
-  cursor: default;
-  text-shadow: #000000 3px 3px 1px;
-  transition: all .2s ease-out;
+  /*text-shadow: #000000 3px 3px 1px;*/
+  transition: transform .2s ease-out;
 }
-.container{
+
+.home-header{
+  margin-top: 20px;
+  cursor: default;
+}
+
+
+.home-page{
   background-color: #F5CB5C;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+.home-padding{
+  padding-top: 6%;
+}
+
+.home-text{
+  font-size: 2em;
 }

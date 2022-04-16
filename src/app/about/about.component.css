@@ -1,46 +1,22 @@
-@media (min-width: 992px){
-    .social-platform{
-        font-size: 25px;        
-    }
-    .social-link{
-        font-size: 20px;
-    }
-    .about-text{
-        font-size: 21px;
-    }
-    .social-list{
-        list-style: none;
-    }
-}
-@media (min-width: 1600px){
-    .about-text{float: left;}
-}
-@media (max-width: 992px){
-    .social-list{list-style: outside;}
-}
-.about-text{
-    width: 74%;
-    line-height: 75px;
-    transition: ease all .5s;
-    color: #2E3D2E;
+.about-page{
+    background-color: #F5CB5C;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
     overflow: auto;
 }
-.social-platform{
-    transition: ease all .5s;
+.about-text{
+    font-size: 20px;
+    color: #2c2c2b;
 }
-.social-link{
-    text-decoration: none;
-    transition: ease all .5s;
-    color: #2E3D2E;
+.text-pointer{
+    height: auto;
+    width: 1vh;
+    background-color: #242423;
+    animation: pointer-anim 1s infinite;
 }
-.social-list{
-    list-style-type: none;    
-}
-li{
-    padding-bottom: 10px;
-}
-.container{
-    color:#242423;
-    background-color: #F5CB5C;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+@keyframes pointer-anim {
+    50% {background-color: #242423;}
+    50.001% {background-color: #F5CB5C;}
+    99.999% {background-color: #F5CB5C;}
+    100% {background-color: #242423;}
 }
