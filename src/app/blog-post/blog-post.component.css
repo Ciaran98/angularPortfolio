@@ -1,9 +1,14 @@
 .icon-back{
-    color: #68ad7e;
+    color: #242423;
     font-size: 30px;
-    float: right;
+    float: left;
+    transition: color .2s;
 
 }
 .icon-back:hover{
-    color: #9ce7b4;
+    color: #000000;
+}
+.blog-post-page{
+    background-color: #F5CB5C;
+    color: #242423;
 }

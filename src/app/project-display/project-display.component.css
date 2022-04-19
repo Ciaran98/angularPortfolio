@@ -1,10 +1,14 @@
 .icon-back{
-    color: #B0C4B1;
+    color: #242423;
     font-size: 30px;
-    float: right;
+    float: left;
     transition: color .2s;
 
 }
 .icon-back:hover{
-    color: #4A5759;
+    color: #000000;
+}
+.project-display-page{
+    background-color: #F5CB5C;
+    color: #242423;
 }

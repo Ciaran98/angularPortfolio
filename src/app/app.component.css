@@ -20,6 +20,7 @@ ul{
     color: #ffffff !important;
 }
 .footer{
+    bottom: 0;
     height: 240px;
 }
 .footer-item{

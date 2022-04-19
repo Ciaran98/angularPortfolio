@@ -1,6 +1,6 @@
 
 .code-snippet-box {
-	border: 2px solid #4A5759;;
+	border: 2px solid #000000;;
 	border-radius: 4px;
 	display: none;
 	overflow: auto;
@@ -47,6 +47,6 @@
 .snippet-method {
 	color: #73bdb0 !important;
 }
-pre{
+pre.snip-box{
 	color: whitesmoke !important;
 }
