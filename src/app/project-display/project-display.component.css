@@ -12,3 +12,51 @@
     background-color: #F5CB5C;
     color: #242423;
 }
+
+
+
+
+.pass-box{
+    background-color: white;
+    font-size: 13px;
+    display: none;
+}
+.pass-box-option{
+    background-color: rgb(230, 230, 230);
+    height: 3%;
+}
+.pass-box-table{
+    background-color: white;
+    height:50%;
+}
+.pass-box-button{
+        width: auto;
+        max-width: 100%;
+        
+}
+th, td{
+    border: 1px solid;
+    border-color: lightgrey;
+    border-collapse: collapse;
+    font-weight: normal;
+}
+th{
+    text-align: center;
+    
+}
+
+.table-text{
+    display: none;
+}
+.hidden-text{
+    display: block;
+}
+
+button:disabled{
+    color: black;
+    background-color: rgb(231, 231, 231);
+    border-color: rgb(167, 167, 167);
+}
+@media (min-width: 768px){
+    .pass-box{display: block;}
+}

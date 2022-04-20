@@ -1,5 +1,44 @@
 <div class="container-fluid project-display-page p-3">
     <a routerLink="/projects"><i class="bi bi-arrow-left-square-fill icon-back pr-2"></i></a>
     <h1 class="display-5 fw-bold">{{projecttitle}}</h1>
+
+    <p>Language Used:&nbsp;&nbsp;JavaScript<i class="fa-brands fa-js"></i>&nbsp;&nbsp;HTML<i class="fa-brands fa-html5"></i>&nbsp;&nbsp;CSS<i class="fa-brands fa-css3-alt"></i></p>
+    This was a basic portfolio webiste I made to show my knowledge of basic web development skills.<br>
+    It's a verb basic website, only utilising JavaScript, HTML, and CSS, whereas my current site (This Site), was made using Angular, TypeScript, Python, SQL, HTML, and CSS.<br>
+    You can view the old site <a href="https://ciaranmelarkey.web.app/"  target="_blank">Here</a>
     <div [innerHTML] = "projecttext"></div>
+
+    <div class="row" *ngIf="id === ':1'">
+    <div class="pass-box w-50 h-50 col-md-8 offset-md-3" style="border: 1px solid black;" >
+        <p>PmPro</p>
+        <div class="w-100 pass-box-option">
+            <button class="pass-box-button"disabled="disabled">Add New Password</button>
+            <button class="pass-box-button"disabled="disabled">Refresh</button>
+            <button class="pass-box-button"disabled="disabled">Delete</button>
+            <button class="pass-box-button"disabled="disabled">Regen Key</button>
+        </div>
+        <div class="w-100 pass-box-table">
+            <table class="w-100">
+                <tr>
+                    <th class="table-col-id" style="width: 2%;"></th>
+                    <th class="table-col-email" style="width: 15%;">Email</th>
+                    <th class="table-col-platform" style="width: 10%;">Platform</th>
+                    <th class="table-col-password"style="width: 73%;">Password</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Test@Email.com</td>
+                    <td>Gmail</td>
+                    <td><span class="table-text" #vistext1>Password</span><span class="hidden-text fw-bold" #hidtext1 (click)="showText(vistext1,hidtext1)">********</span></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>AnotherTest@Email.com</td>
+                    <td>Outlook</td>
+                    <td><span class="table-text" #vistext2>AnotherPassword</span><span class="hidden-text fw-bold" #hidtext2 (click)="showText(vistext2,hidtext2)">***************</span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
 </div>

@@ -10,7 +10,7 @@
     height: auto;
     width: 1vh;
     background-color: #F5CB5C;
-    animation: pointer-anim-last 1.2s linear 2s infinite normal;
+    animation: pointer-anim-last 1000ms linear 1800ms infinite normal;
 }
 .text-pointer-first{
     height: auto;

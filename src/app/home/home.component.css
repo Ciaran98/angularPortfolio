@@ -1,6 +1,6 @@
 @media (max-width: 425px){
   .home-header, .home-text{
-    font-size: 2vh;
+    font-size: 1.5em !important;
   }
   .header-img{
     height: 200px;
@@ -17,11 +17,12 @@
   }
 }
 .home-header, .home-text{
-  font-size: 3vh;
+  font-size: 3em;
 }
 .letters{
   /*text-shadow: #000000 3px 3px 1px;*/
   transition: transform .2s ease-out;
+  
 }
 
 .home-header{
@@ -36,8 +37,4 @@
 }
 .home-padding{
   padding-top: 6%;
-}
-
-.home-text{
-  font-size: 2em;
 }
