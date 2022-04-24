@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GetDBContentService } from '../get-db-content.service';
 import { Title } from '@angular/platform-browser';
+import projectjson from 'src/assets/project.json';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
@@ -8,15 +8,10 @@ import { Title } from '@angular/platform-browser';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor(private db : GetDBContentService,private titleService: Title) { }
-  projectdata :string = "";
+  constructor(private titleService: Title) { }
+  public jsondata = projectjson;
   ngOnInit(): void {
     this.titleService.setTitle("Projects")
-    this.db.getProjects().subscribe(
-      res =>{
-        this.projectdata = res;
-      }
-    )
   }
 
 }

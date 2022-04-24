@@ -1,14 +1,15 @@
 <div class="container-fluid project-display-page p-3">
     <a routerLink="/projects"><i class="bi bi-arrow-left-square-fill icon-back pr-2"></i></a>
     <h1 class="display-5 fw-bold">{{projecttitle}}</h1>
-
-    <p>Language Used:&nbsp;&nbsp;JavaScript<i class="fa-brands fa-js"></i>&nbsp;&nbsp;HTML<i class="fa-brands fa-html5"></i>&nbsp;&nbsp;CSS<i class="fa-brands fa-css3-alt"></i></p>
+    <a href="{{projecturl}}" target="_blank" class="gitlink">Github Repo</a>
+    <!--<p>Language Used:&nbsp;&nbsp;JavaScript<i class="fa-brands fa-js"></i>&nbsp;&nbsp;HTML<i class="fa-brands fa-html5"></i>&nbsp;&nbsp;CSS<i class="fa-brands fa-css3-alt"></i></p>
     This was a basic portfolio webiste I made to show my knowledge of basic web development skills.<br>
     It's a verb basic website, only utilising JavaScript, HTML, and CSS, whereas my current site (This Site), was made using Angular, TypeScript, Python, SQL, HTML, and CSS.<br>
-    You can view the old site <a href="https://ciaranmelarkey.web.app/"  target="_blank">Here</a>
+    You can view the old site <a href="https://ciaranmelarkey.web.app/"  target="_blank">Here</a>.<br>
+    The contents of the website are on a single page. The site contains an about me section, previous work / experience, and a code snippets section. The code snippet section is similar to the code examples page on this site.-->
     <div [innerHTML] = "projecttext"></div>
 
-    <div class="row" *ngIf="id === ':1'">
+    <!--<div class="row" *ngIf="id === ':1'">
     <div class="pass-box w-50 h-50 col-md-8 offset-md-3" style="border: 1px solid black;" >
         <p>PmPro</p>
         <div class="w-100 pass-box-option">
@@ -39,6 +40,6 @@
                 </tr>
             </table>
         </div>
-    </div>
-</div>
+        </div>
+    </div>-->
 </div>

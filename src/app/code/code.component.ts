@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { NgForm, NgModel } from '@angular/forms';
+import { NgForm,} from '@angular/forms';
 import snippetJson from 'src/assets/snippets.json'
 import { Renderer2 } from '@angular/core';
 import { Title } from '@angular/platform-browser';
@@ -14,13 +14,11 @@ export class CodeComponent implements OnInit {
   selectValue: string ="";
   selectedsnippet: string="";
   snippetDescription: string="";
-  currentSelect: string="";
   constructor(private renderer: Renderer2, private titleService: Title) { }
   ngOnInit(): void {
     this.titleService.setTitle("Code Examples")
-
   }
-  selectsnippet(snippetform: NgForm,box:HTMLElement,description:HTMLElement){
+  selectsnippet(snippetform: NgForm,box:HTMLElement){
     if(snippetform.controls['snippetSelect'].value !="default"){
       this.selectValue=snippetform.controls['snippetSelect'].value;
       this.selectedsnippet=this.snippetdata[this.selectValue]['snippet'];

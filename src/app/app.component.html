@@ -12,16 +12,7 @@
         <a class="nav-link" routerLink="/projects"><b><i class="fa-solid fa-list-check"></i><span class="nav-link-text"> Projects</span></b></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/blog"><b><i class="fa-solid fa-book"></i><span class="nav-link-text"> Blog</span></b></a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" routerLink="/code"><b><i class="bi bi-code-slash"></i><span class="nav-link-text"> Code Examples</span></b></a>
-      </li>
-      <li class="nav-item" *ngIf="loggedIn === false">
-        <a class="nav-link" routerLink="/login"><b><i class="bi bi-person-plus"></i><span class="nav-link-text"> Login</span></b></a>
-      </li>
-      <li class="nav-item" *ngIf="loggedIn === true">
-        <a class="nav-link" routerLink="" (click)="logout()"><b><i class="bi bi-person-dash"></i><span class="nav-link-text"> Logout</span></b></a>
       </li>
     </ul>
   </div>

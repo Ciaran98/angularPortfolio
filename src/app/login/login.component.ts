@@ -13,14 +13,8 @@ export class LoginComponent implements OnInit {
 	constructor(private db: GetDBContentService,private router: Router,private account:AccountService,private titleService: Title) { }
 	error:boolean = false;
 	ngOnInit(): void {
-		this.titleService.setTitle("Login")
-		if(localStorage.getItem("Data") != null)
-		{
-			const loggedData = JSON.parse(localStorage.getItem("Data")!)
-			if(loggedData["loggedIn"] == "true"){
-				this.router.navigate(['/'])
-			}
-		}
+		this.router.navigate(['/']);
+		this.titleService.setTitle("Login");
 	}
 	public newAccoutSubmission(newAccountForm: NgForm) {
 		this.db.addUser(newAccountForm.controls['email'].value,newAccountForm.controls['password'].value,newAccountForm.controls['username'].value).subscribe(
@@ -39,7 +33,12 @@ export class LoginComponent implements OnInit {
 			}
 		)
 	}
-		public loginSubmission(loginForm: NgForm){
+		/*public loginSubmission(loginForm: NgForm){
+			this.db.loginUser().subscribe(
+				res =>{
+					console.log(res);
+				}
+			)
 			this.db.loginUser(loginForm.controls['email'].value,loginForm.controls['password'].value).subscribe(
 				res =>{
 					if(res){
@@ -62,4 +61,6 @@ export class LoginComponent implements OnInit {
 				loginForm.controls['email'].reset()
 				loginForm.controls['password'].reset()
 			}
+		}*/
+		
 		}

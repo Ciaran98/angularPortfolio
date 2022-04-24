@@ -13,6 +13,20 @@
     color: #242423;
 }
 
+.gitlink{
+    font-weight: bold;
+    font-size: 30px;
+    color: #252481;
+}
+.gitlink:hover{
+    color:#242423;
+}
+
+
+
+
+
+
 
 
 
@@ -42,7 +56,6 @@ th, td{
 }
 th{
     text-align: center;
-    
 }
 
 .table-text{
@@ -60,3 +73,4 @@ button:disabled{
 @media (min-width: 768px){
     .pass-box{display: block;}
 }
+

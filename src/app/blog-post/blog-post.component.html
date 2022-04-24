@@ -1,7 +1,7 @@
 <div class="container-fluid blog-post-page p-3">
   <a routerLink="/blog"><i class="bi bi-arrow-left-square-fill icon-back pr-2"></i></a>
     <h1 class="display-5 fw-bold">{{title}}</h1>
-    {{blogposttext}}
+    {{blogpostdata}}
     <div class="container" *ngFor="let row of commentdata">
       <hr>
           <p>{{row[2]}}: {{row[0]}} </p>

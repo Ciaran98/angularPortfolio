@@ -1,0 +1,10 @@
+{
+    "/api": {
+      "target": "https://www.googleapis.com/oauth2/v1/certs",
+      "secure": true,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/api": ""
+      }
+    }
+  }
