@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ciaran-melarkey": {
+      "hosting": {
+        "webapp": [
+          "ciaran"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ciaran-melarkey"
+  }
+}

@@ -1,9 +1,9 @@
-<div class="container-fluid h-auto">
+<div class="container-fluid h-auto projects-main">
     <div class="py-2" *ngFor="let row of jsondata">
-      <div class="p-3 text-white rounded-3  project-item" style="background-image:linear-gradient(250deg, rgba(255,255,255,0) 23%, #f5cb5c 23.1%), url(../../assets/{{row['projectimg']}}.PNG);background-position: left,right;">
-        <h1>{{row["projectname"]}}</h1>
+      <div class="p-3 text-white rounded-3  project-item">
+        <h1 class="fw-bold">{{row["projectname"]}}</h1>
         <p class="project-description">{{row["projectdescription"]}}</p>
-        <a routerLink="/project/:{{row['projectindex']}}"><button class="btn" type="button">View Project</button></a>
+        <a routerLink="/project/{{row['projectindex']}}"><button class="btn" type="button">View Project</button></a>
       </div>
     </div>
   </div>

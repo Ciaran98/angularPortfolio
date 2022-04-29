@@ -101,6 +101,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "webapp:build:production",
+            "firebaseProject": "ciaran-melarkey",
+            "firebaseHostingSite": "ciaran"
+          }
         }
       }
     }

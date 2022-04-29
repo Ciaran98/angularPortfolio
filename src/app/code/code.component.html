@@ -10,6 +10,7 @@
         <option *ngFor="let options of snippetdata" value="{{options['index']}}">{{options['name']}}</option>
       </select>
     </form>
-      <div class="code-text">{{snippetDescription}}</div><br>
     <div class=" code-snippet-box" style="background-color: #141925;" #snippetbox [innerHTML]="selectedsnippet"></div>
+      <div class="code-text">{{snippetDescription}}</div>
+    
   </div>

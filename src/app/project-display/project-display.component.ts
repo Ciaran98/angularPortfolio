@@ -1,6 +1,6 @@
 import { Component, OnInit,ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import projectjson from 'src/assets/project.json';
+import projectjson from 'src/assets/projects.json';
 import { Renderer2 } from '@angular/core';
 @Component({
   selector: 'app-project-display',
@@ -17,9 +17,9 @@ export class ProjectDisplayComponent implements OnInit {
   public projecturl: string="";
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id')!;
-    this.projecttext = projectjson[parseInt(this.id.replace(":",""))-1]["projecttext"]
-    this.projecttitle = projectjson[parseInt(this.id.replace(":",""))-1]["projectname"]
-    this.projecturl= projectjson[parseInt(this.id.replace(":",""))-1]["projectgithub"]
+    this.projecttitle = projectjson[this.id]['projectname']
+    this.projecttext = projectjson[this.id]['projecttext']
+    this.projecturl= projectjson[this.id]["projectgithub"]
   }
   showText(vistext:HTMLElement,hidtext:HTMLElement){
     this.renderer.setStyle(vistext,"display","block");

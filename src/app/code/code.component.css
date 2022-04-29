@@ -6,6 +6,13 @@
 	overflow: auto;
 	font-size: 16px;
 	padding: 10px;
+	
+}
+@media(min-width:1000px){
+	.code-snippet-box{
+		width: 60vw;
+		float: right;
+	}
 }
 .code-bg{
 	background-color: #F5CB5C;

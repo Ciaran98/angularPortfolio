@@ -1,15 +1,16 @@
 .about-page{
-    background-color: #F5CB5C;
+    background-color: #242423;
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    height: 100vh;
 }
 .about-text{
     font-size: 20px;
-    color: #2c2c2b;
+    color: #ffffff;
 }
 .text-pointer-last{
     height: auto;
     width: 1vh;
-    background-color: #F5CB5C;
+    background-color: #242423;
     animation: pointer-anim-last 1000ms linear 1800ms infinite normal;
 }
 .text-pointer-first{
@@ -18,56 +19,129 @@
     position: relative;
     animation: pointer-anim-first 2000ms linear 0s 1 normal forwards;
 }
-ul.about-list{
-    list-style-type:">";
-    padding: 1;
+.fact-header{
+    font-family: 'Josefin Sans', sans-serif;
 }
-
-ul.about-list > li{
+ul.facts-list{
+    list-style-type:">";
+    padding-left:0;
+    font-family: 'Josefin Sans', sans-serif;
+    
+}
+@media (min-width:768px){
+    ul.facts-list{
+        font-size: 25px !important;
+    }
+}
+@media (max-width:767px){
+    ul.facts-list{
+        font-size: 14px !important;
+    }
+}
+ul.facts-list > li{
     padding: 10px;
 }
-
+/* Skills section */
+.lang-page{
+    font-size: 20px;
+    color: #5f5f5f;
+    font-family: 'Josefin Sans', sans-serif;
+    min-height: 100vh;
+    background-color: #F5CB5C;
+    padding-top:20px;
+}
+.skill:hover{
+    transform: scale(1.1);
+    
+}
+.angular:hover{
+    box-shadow: 0px 0px 30px 4px #ffffffd7, 0px 0px 50px 25px #e20303;
+}
+.bootstrap:hover{
+    box-shadow: 0px 0px 30px 4px #ffffffd7, 0px 0px 50px 25px #9726a7;
+}
+.node:hover{
+    box-shadow: 0px 0px 30px 4px #ffffffd7, 0px 0px 50px 25px #49f515;
+}
+.blue:hover{
+    box-shadow: 0px 0px 30px 4px #ffffffd7, 0px 0px 50px 25px #1551f5;
+}
+.orange:hover{
+    box-shadow: 0px 0px 30px 4px #ffffffd7, 0px 0px 50px 25px #f56f15;
+}
+.javascript:hover{
+    box-shadow: 0px 0px 30px 4px #ffffffd7, 0px 0px 50px 25px #f5d315;
+}
+.skill{
+    background-color: white;
+    width: 175px;
+    height: 250px;
+    margin: 40px;
+    border-radius: 4px;
+    transition: box-shadow .3s ease-in-out 0s;
+}
+.skill > img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 120px;
+    height: auto;
+    padding: 5px 5px 20px 5px;
+}
+.skill > p{
+    color: #2c2c2b;
+}
+.tech-page{
+    font-size: 20px;
+    color: #ffffff;
+    font-family: 'Josefin Sans', sans-serif;
+    min-height: 100vh;
+    background-color: #242423;
+    padding-top:20px;
+}
+hr{
+    color: #5f5f5f;
+}
 /* Animation for the letters */
 @keyframes letter-anim{
-    0%{color: #F5CB5C;}
-    99.999% {color: #F5CB5C;}
-    100% {color: #242423;}
+    0%{color: #242423;}
+    99.999% {color: #242423;}
+    100% {color: #ffffff;}
 }
 /*Frames to animate the about-text as if it is being written*/
 @keyframes pointer-anim-first {
     /* Blank Frame */
-    0% {background-color:#242423; left:0em;}
-    11.99% {background-color:#242423; left:0em;}
+    0% {background-color:#ffffff; left:0em;}
+    11.99% {background-color:#ffffff; left:0em;}
     /* First Frame: < */
-    12% {background-color:#242423; left:0.7em;}
-    17.99% {background-color:#242423; left:0.7em;}
+    12% {background-color:#ffffff; left:0.7em;}
+    17.99% {background-color:#ffffff; left:0.7em;}
     /* Second Frame: A */ 
-    18% {background-color:#242423; left:1.33em;}
-    23.99% {background-color:#242423; left:1.33em;}
+    18% {background-color:#ffffff; left:1.33em;}
+    23.99% {background-color:#ffffff; left:1.33em;}
     /* Third Frame: b */
-    24% {background-color:#242423; left:2em;}
-    35.99% {background-color:#242423; left: 2em;}
+    24% {background-color:#ffffff; left:2em;}
+    35.99% {background-color:#ffffff; left: 2em;}
     /* Fourth Frame: o */ 
-    36% {background-color:#242423; left:2.6em;}
-    44.99% {background-color:#242423; left:2.6em;}
+    36% {background-color:#ffffff; left:2.6em;}
+    44.99% {background-color:#ffffff; left:2.6em;}
     /* Fifth Frame: u */
-    45% {background-color:#242423; left:3.23em;}
-    49.99% {background-color:#242423; left:3.23em;}
+    45% {background-color:#ffffff; left:3.23em;}
+    49.99% {background-color:#ffffff; left:3.23em;}
     /* Sixth Frame: t */
-    50% {background-color:#242423; left:3.7em;}
-    62.99% {background-color:#242423; left:3.7em;}
+    50% {background-color:#ffffff; left:3.7em;}
+    62.99% {background-color:#ffffff; left:3.7em;}
     /* Seventh Frame: Space */
-    63% {background-color:#242423; left:4em;}
-    71.99% {background-color:#242423; left:4em;}
+    63% {background-color:#ffffff; left:4em;}
+    71.99% {background-color:#ffffff; left:4em;}
     /* Eigth Frame: M */
-    72% {background-color:#242423; left:4.8em;}
-    77.99% {background-color:#242423; left:4.8em;}
+    72% {background-color:#ffffff; left:4.8em;}
+    77.99% {background-color:#ffffff; left:4.8em;}
     /* Ninth Frame: E */
-    78% {background-color:#242423; left:5.4em;}
-    89.99% {background-color:#242423; left:5.4em;}
+    78% {background-color:#ffffff; left:5.4em;}
+    89.99% {background-color:#ffffff; left:5.4em;}
     /*Tenth Frame: / */
-    90% {background-color:#242423; left:6.0em;}
-    99.99% {background-color:#242423; left:6.0em;}
+    90% {background-color:#ffffff; left:6.0em;}
+    99.99% {background-color:#ffffff; left:6.0em;}
     /*Eleventh Frame: > */
     100% {display: none; left:6.81em;}
 }
@@ -75,10 +149,10 @@ ul.about-list > li{
 /* Animation Frames for the pointer at the end of the about-me text */
 @keyframes pointer-anim-last {
     0%{display: none;}
-    50% {background-color: #F5CB5C;}
-    50.001% {background-color: #242423;}
-    99.999% {background-color: #242423;}
-    100% {background-color: #F5CB5C;}
+    50% {background-color: #242423;}
+    50.001% {background-color: #ffffff;}
+    99.999% {background-color: #ffffff;}
+    100% {background-color: #242423;}
 }
 
 /* Animation Classes*/

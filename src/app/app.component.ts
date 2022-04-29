@@ -3,6 +3,7 @@ import {Title} from '@angular/platform-browser';
 import { GetDBContentService } from './get-db-content.service';
 import { Router,ActivatedRoute } from '@angular/router';
 import { AccountService } from './account.service';
+
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
