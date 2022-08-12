@@ -8,5 +8,20 @@
         "projectname":"Simple Portfolio Website",
         "projectdescription": "Website built using HTML, CSS, and JavaScript.",
         "projectindex":"portfolio"
+    },
+    {
+        "projectname":"Apex Randomiser",
+        "projectdescription":"Loadout, Character, and Drop Point randomiser for the Video Game, 'Apex Legends'.",
+        "projectindex":"apexrandom"
+    },
+    {
+        "projectname":"Image to Braille",
+        "projectdescription":"Converts Images to a Braille version of the image, where 1 pixel is equal to one character on a 2x4 braille unicode character.",
+        "projectindex":"brailleimage"
+    },
+    {
+        "projectname":"Vinyle",
+        "projectdescription":"Wordle like game where you have to guess the name of an album from a pixelated album cover.",
+        "projectindex":"vinyle"
     }
 ]

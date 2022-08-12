@@ -1,7 +1,7 @@
 <div class="container-fluid h-auto projects-main">
     <div class="py-2" *ngFor="let row of jsondata">
       <div class="p-3 text-white rounded-3  project-item">
-        <h1 class="fw-bold">{{row["projectname"]}}</h1>
+        <h1 class="fw-bold project-title">{{row["projectname"]}}</h1>
         <p class="project-description">{{row["projectdescription"]}}</p>
         <a routerLink="/project/{{row['projectindex']}}"><button class="btn" type="button">View Project</button></a>
       </div>

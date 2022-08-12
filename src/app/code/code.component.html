@@ -1,16 +1,17 @@
 <div class="container-fluid h-auto code-bg">
-    <h1 class="d-flex fw-bold code-header pt-1" style="color: #242423;">&#123;Code Examples&#125;</h1>
-    <p class="code-text">
-      Welcome to the code examples, here you can check out some snippets of code from previous projects!<br>
-      Please use the dropdown to select a snippet.
-    </p>
-    <form #snippetform="ngForm" (change)="selectsnippet(snippetform,snippetbox)" class="pb-3">
-      <select id="select" ngModel #select="ngModel" name="snippetSelect">
-        <option value="default"> -- Select An Option -- </option>
-        <option *ngFor="let options of snippetdata" value="{{options['index']}}">{{options['name']}}</option>
-      </select>
-    </form>
+  <h1 class="d-flex fw-bold code-header pt-1" style="color: #242423;">&#123;Code Examples&#125;</h1>
+  <p class="code-text">
+    Welcome to the code examples, here you can check out some snippets of code from previous projects!<br>
+    Please use the dropdown to select a snippet.
+  </p>
+  <form #snippetform="ngForm" (change)="selectsnippet(snippetform,snippetbox)" class="pb-3">
+    <select id="select" ngModel #select="ngModel" name="snippetSelect">
+      <option *ngFor="let options of snippetdata" value="{{options['index']}}">{{options['name']}}</option>
+    </select>
+  </form>
+  <div class="container-fluid">
+    <div class="code-text snip-desc">{{snippetDescription}}</div>
     <div class=" code-snippet-box" style="background-color: #141925;" #snippetbox [innerHTML]="selectedsnippet"></div>
-      <div class="code-text">{{snippetDescription}}</div>
-    
   </div>
+  
+</div>

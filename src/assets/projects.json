@@ -8,5 +8,20 @@
         "projectname":"Simple Portfolio Website",
         "projecttext":"<p>Language Used:&nbsp;&nbsp;JavaScript, HTML, CSS</p>This was a basic portfolio webiste I made to show my knowledge of basic web development skills.<br>It's a verb basic website, only utilising JavaScript, HTML, and CSS, whereas my current site (This Site), was made using Angular, TypeScript, Python, SQL, HTML, and CSS.<br>You can view the old site <a href=\"https://ciaranmelarkey.web.app/\"  target=\"_blank\">Here</a>.<br>The contents of the website are on a single page. The site contains an about me section, previous work / experience, and a code snippets section. The code snippet section is similar to the code examples page on this site.",
         "projectgithub":"https://github.com/Ciaran98/ciaranmelarkeyapp"
+    },
+    "apexrandom":{
+        "projectname":"Apex Randomiser",
+        "projecttext":"<p>Technologies Used:&nbsp;&nbsp;TypeScript, HTML, CSS, Angular</p>This site is a Loadout, Character, and Map Drop Point randomiser for the popular video game 'Apex Legends'.<br>You can view the randomiser <a href=\"https://apexrandom.web.app/\"  target=\"_blank\">Here</a>.<br>To begin using the site, you click the big 'Randomise' button to generate a random loadout, character, and drop point on the current map on rotation. I designed the site to resemble the ui elements of the game as best as I could using CSS, and photoshop for some custom elements. I utilised recursion when you recieve the same randomised element twice in a row, to make it feel more random. The map drop point uses a JQuery plugin called ImageMapster, that adds extra functionality to the ImageMap HTML tag, such as styling.",
+        "projectgithub":"https://github.com/Ciaran98/apexrandom"
+    },
+    "brailleimage":{
+        "projectname":"Image to Braille",
+        "projecttext":"<p>Technologies Used:&nbsp;&nbsp;JavaScript, HTML, CSS, Vue.js, Node.js</p>This site allows users to upload an Image, and convert it to a Braille representation of that Image, where 1 pixel on the image is represented by a dot on a 2x4 braille unicode character.<br>The site works best when you use an image with lots of dark and light areas.<br>You can view the site <a href=\"https://braille-image.herokuapp.com/#/\"  target=\"_blank\">Here</a>.",
+        "projectgithub":"https://github.com/Ciaran98/Braille-Image-Web"
+    },
+    "vinyle":{
+        "projectname":"Vinyle",
+        "projecttext":"<p>Language Used:&nbsp;&nbsp;JavaScript, HTML, CSS, Vue.js, Node.js, MongoDB</p>This is a Wordle-like game where you need to guess the name of an album from the pixelated album cover.<br>You can view the game <a href=\"https://vinyle-game.herokuapp.com/#/\"  target=\"_blank\">Here</a>.",
+        "projectgithub":"https://github.com/Ciaran98/Vinyle"
     }
 }

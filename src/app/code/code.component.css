@@ -11,9 +11,13 @@
 @media(min-width:1000px){
 	.code-snippet-box{
 		width: 60vw;
-		float: right;
+	}
+	.snip-desc{
+		width: 60vw;
+		padding-bottom: 30px;
 	}
 }
+
 .code-bg{
 	background-color: #F5CB5C;
 	box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;

@@ -1,27 +1,41 @@
-.btn{
-    background-color: #242423;
-    font-family: "Open Sans", sans-serif;
-    font-weight: bold;
-    font-size: 18px;
-    color: #ffffff;
-    border: 2px solid #242423;
+.btn {
+  background-color: #242423;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: #ffffff;
+  border: 2px solid #ffffff;
 }
-.btn:hover{
-    background-color:#F5CB5C;
-    color: #242423;
-    border: 2px solid #242423;
+.btn:hover {
+  background-color: #f5cb5c;
+  color: #242423;
+  border: 2px solid #242423;
 }
-.project-item{
-    height: 400px;
-    color:#242423 !important;
+.project-item {
+  height: 300px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid rgb(34, 34, 34);
+  background-color: #242423;
+  color: #f0f0f0 !important;
 }
-.projects-main{
-    background-color: #F5CB5C;
+.projects-main {
+  background-color: #f5cb5c;
 }
-@media (max-width: 425px){
-    .project-description{width: 100% !important;}
-    .project-item{}
-}
-.project-description{
-    width: 70%;
+@media (max-width: 425px) {
+  .project-description {
+    font-size: 12px;
+  }
+  .project-item {
+    height: 200px;
+  }
+  .project-title {
+    font-size: 20px;
+  }
+  .btn {
+    width: 100px;
+    height: 50px;
+    font-size: 12px;
+  }
 }
