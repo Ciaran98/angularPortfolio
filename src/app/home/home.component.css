@@ -1,40 +1,41 @@
-@media (max-width: 425px){
-  .home-header, .home-text{
+@media (max-width: 720px) {
+  .home-header,
+  .home-text {
     font-size: 1.5em !important;
   }
-  .header-img{
+  .header-img {
     height: 200px;
     width: auto;
   }
-  .home-padding{
+  .home-padding {
     padding-top: 30% !important;
   }
 }
-@media (min-width: 1024px){
-  .letters:hover{
-    transform: translate(0px,-20px);
-    /*text-shadow: #1a1919 3px 23px 1px;*/
+
+@media (min-width: 1024px) {
+  .letters:hover {
+    transform: translate(0px, -20px);
   }
 }
-.home-header, .home-text{
+.home-header,
+.home-text {
   font-size: 3em;
 }
-.letters{
-  /*text-shadow: #000000 3px 3px 1px;*/
-  transition: transform .2s ease-out;
-  
+.letters {
+  transition: transform 0.2s ease-out;
+  font-weight: bold;
+  font-family: "Lora", serif;
 }
 
-.home-header{
+.home-header {
   margin-top: 20px;
   cursor: default;
 }
 
-
-.home-page{
-  background-color: #F5CB5C;
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+.home-page {
+  color: #ffffff;
+  background-color: #1d1d1d;
 }
-.home-padding{
+.home-padding {
   padding-top: 6%;
 }

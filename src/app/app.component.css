@@ -1,78 +1,55 @@
-ul{
-    list-style-type: none ;
-    margin: 0; 
-    padding: 0; 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
-.navbar,.footer{
-    background-color: #242423;
+.navbar,
+.footer {
+  background-color: #242423;
 }
-.navbar-brand{
-    color: #ffffff !important;
-    font-family: "Lora", serif;
-    font-size: 15px;
+.navbar-brand {
+  color: #ffffff !important;
+  font-family: "Lora", serif;
+  font-size: 20px;
+  border-radius: 7px;
+  padding: 5px;
 }
-.navbar{
-    height: auto;
+.navbar {
+  height: auto;
 }
-.nav-link{
-    font-family: "Open Sans", sans-serif;
-    font-size: 16px;
-    color: #ffffff !important;
+.nav-link {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  border-radius: 7px;
 }
-.footer{
-    bottom: 0;
-    height: 240px;
+.footer-item {
+  padding-left: 25px;
+  padding-right: 25px;
 }
-.footer-item{
-    padding-left: 25px;
-    padding-right: 25px;
+.footer-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
-.footer-flex{
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.footer-icon {
+  font-size: 40px;
+  color: #ffffff;
 }
-.footer-icon{
-    font-size: 40px;
-    color: #ffffff;
+.nav-link-text {
+  font-weight: normal;
 }
-@media (min-width: 320px){
+.nav-link:hover,
+.navbar-brand:hover {
+  background-color: #01b5fc8a;
 }
-@media (min-width: 375px){
-}
-@media (max-width: 425px){
-    .footer-flex{
-        flex-direction: column;
-    }
-}
-@media (min-width: 426px){
-    .footer-padding{
-        padding-top: 5rem;
-    }
-}
-@media (min-width: 768px){
-    .footer-item{
-        transition: transform 1s ease   
-    }
-    .footer-item:hover{
-        transform: rotate(360deg);  
-    }
-}
-@media (min-width: 992px){
-    .bi-nav:hover +.nav-link-text{
-        font-size: 20px;
-    }
-    .nav-item:hover .nav-link-text{
-        transition: all .6s ease-in-out;
-        font-size: 14px;
-    }
-    .nav-link-text{
-        transition: all .6s ease-in .3s;
-        font-size: 0px;
-    }
-}
-@media (min-width: 1024px){
-}
-@media (min-width: 1440px){
+
+@media (max-width: 720px) {
+  .footer-flex {
+    flex-direction: column;
+  }
+  .footer-icon {
+    font-size: 30px;
+  }
 }

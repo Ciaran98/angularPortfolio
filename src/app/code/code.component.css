@@ -1,63 +1,64 @@
-
-.code-snippet-box {
-	border: 2px solid #000000;;
-	border-radius: 4px;
-	display: none;
-	overflow: auto;
-	font-size: 16px;
-	padding: 10px;
-	
-}
-@media(min-width:1000px){
-	.code-snippet-box{
-		width: 60vw;
-	}
-	.snip-desc{
-		width: 60vw;
-		padding-bottom: 30px;
-	}
-}
-
-.code-bg{
-	background-color: #F5CB5C;
-	box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-	padding-bottom: 25px;
-	overflow:auto;
-  }
-.code-header{
-	cursor: default;
-}
-.code-text{
-    font-size: 2vh;
-    color: #2c2c2b;
-}
 /* This code is for the snippet box, each of these classes changes the text color of certain words in the snippet box */
 .snippet-keyword {
-	color: #c695c6 !important;
+  color: #c695c6 !important;
 }
 .snippet-operator {
-	color: #f97b58 !important;
+  color: #f97b58 !important;
 }
 
 .snippet-function {
-	color: #6699cc !important;
+  color: #6699cc !important;
 }
 
 .snippet-string {
-	color: #99c794 !important;
+  color: #99c794 !important;
 }
 
 .snippet-constant {
-	color: #ec5f66 !important;
+  color: #ec5f66 !important;
 }
 
 .snippet-function-argument {
-	color: #f9ae58 !important;
+  color: #f9ae58 !important;
 }
 
 .snippet-method {
-	color: #73bdb0 !important;
+  color: #73bdb0 !important;
 }
-pre.snip-box{
-	color: whitesmoke !important;
+pre.snip-box {
+  color: whitesmoke !important;
+}
+
+.code-page {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #1d1d1d;
+}
+.code-content {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.code-snippet-box {
+  border: 2px solid #ffffff;
+  border-radius: 7px;
+  display: none;
+  overflow: auto;
+  font-size: 16px;
+  padding: 10px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 720px) {
+  .code-content {
+    font-size: 16px;
+  }
+  .code-snippet-box {
+    width: 100%;
+    font-size: 12px;
+  }
 }
