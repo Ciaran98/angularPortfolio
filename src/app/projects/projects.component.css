@@ -1,61 +1,152 @@
-.projects-page {
+.project-page {
+  display: flex;
+  flex-direction: column;
+  background-color: #181818;
+}
+.project-wrapper {
+  width: 80%;
+  margin: 25px auto;
+}
+.project-container {
+  padding: 10px 20px;
+  margin: 0px auto 25px;
+  background-color: #252525;
+  border-radius: 1px;
+  animation: slideIn 0.7s;
+}
+.project-header,
+.showcase-header {
+  font-family: "lora", "serif";
+  font-weight: 500;
+}
+.project-header {
+  animation: slideIn 0.5s;
+}
+.project-text,
+.showcase-text {
   font-family: "Josefin Sans", sans-serif;
-  background-color: #1d1d1d;
 }
-.projects-content {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+
+.project-text {
+  opacity: 0;
+  animation: slideIn 0.5s 0.5s forwards;
   font-size: 20px;
-  padding-top: 10px;
-  padding-bottom: 20px;
 }
-a {
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-  border-radius: 7px;
-  width: 100px;
-  text-align: center;
+.showcase-text {
+  font-size: 16px;
 }
-a:hover {
-  background-color: #01b5fc8a;
-}
-ul {
-  text-align: center;
-  list-style: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 10px;
-}
-.example-image {
-  width: 200px;
-  height: auto;
-  margin: 20px 50px 0px;
-}
-figcaption {
-  text-align: center;
-  font-size: 14px;
-}
-.images {
+.showcase-container {
   display: flex;
   flex-direction: row;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 25px;
+  overflow: hidden;
 }
-@media (max-width: 720px) {
-  .projects-content {
-    font-size: 16px;
+.showcase {
+  background-color: #252525;
+  width: 44%;
+  border-radius: 1px;
+  opacity: 0;
+}
+
+.showcase-content-wrapper {
+  padding: 10px 20px;
+}
+a {
+  color: white;
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+}
+.links {
+  display: flex;
+  flex: row;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+.project-image {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  image-rendering: optimizeQuality;
+}
+.showcase-image {
+  position: relative;
+
+  width: 100%;
+  background-position: 50% 10%;
+  height: 350px;
+  background-size: cover;
+  color: white;
+}
+.showcase-header {
+  position: absolute;
+  padding: 0;
+  margin: 10px;
+  bottom: 0;
+}
+.showcase:nth-child(odd) {
+  animation: slideIn 0.5s 1s forwards;
+}
+.showcase:nth-child(even) {
+  animation: slideInRight 0.5s 1.5s forwards;
+}
+@media (max-width: 768px) {
+  .project-wrapper {
+    width: 90%;
   }
-  .images {
+  .showcase-container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .example-image {
-    margin: 0;
+  .showcase {
+    padding: 0;
+    width: 100%;
+  }
+  .showcase-text {
+    padding: 0px 20px;
+  }
+  .project-text {
+    font-size: 16px;
+  }
+  .links {
+    margin: 10px 20px;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translate(-200px, 0px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translate(200px, 0px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translate(0px, 200px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
   }
 }

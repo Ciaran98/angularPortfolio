@@ -1,107 +1,51 @@
-<!--<nav class="navbar navbar-expand-lg  navbar-inverse">
-  <a class="navbar-brand" routerLink="/"><i>Ciarán Melarkey</i></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-    <i class="bi bi-justify" style="color: #ffffff;font-size: 30px;"></i>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/about"><b><i class="fa-solid fa-address-card"></i><span class="nav-link-text"> About</span></b></a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link" routerLink="/projects"><b><i class="fa-solid fa-list-check"></i><span class="nav-link-text"> Projects</span></b></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/code"><b><i class="bi bi-code-slash"></i><span class="nav-link-text"> Code Examples</span></b></a>
-      </li>
-    </ul>
-  </div>
-</nav>
+<div class="nav-container preload" #navContainer>
+  <header>
+    <nav class="navbar">
+      <a class="nav-branding" routerLink="/">Ciarán Melarkey</a>
+      <ul class="nav-menu preload" #navMenu>
+        <li class="nav-items">
+          <a class="nav-link" routerLink="/about" routerLinkActive="active-link"
+            >About</a
+          >
+        </li>
+        <li class="nav-items">
+          <a
+            class="nav-link"
+            routerLink="/projects"
+            routerLinkActive="active-link"
+            >Projects</a
+          >
+        </li>
+        <li class="nav-items">
+          <a class="nav-link" routerLink="/code" routerLinkActive="active-link"
+            >Code Examples</a
+          >
+        </li>
+      </ul>
+      <div class="hamburger-lines" #hamburger>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </nav>
+  </header>
+</div>
 <router-outlet></router-outlet>
-<footer class="footer">
-  <ul class="footer-padding footer-flex">
-    <li class="footer-item">
-      <a class="btn"
-        href="https://github.com/Ciaran98" role="button" target="_blank"><i class="bi bi-github footer-icon"></i>
-      </a>
-    </li>
-    <li class="footer-item">
-      <a class="btn"
-        href="https://www.linkedin.com/in/ciaran-melarkey-694469194/" role="button" target="_blank"><i class="bi bi-linkedin footer-icon" ></i>
-      </a>
-    </li>
-    <li class="footer-item">
-      <a class="btn"
-        href="mailto:ciaran.melarkey@hotmail.com" role="button"><i class="bi bi-envelope-fill footer-icon" ></i>
-      </a>
-    </li>
-  </ul>
-</footer>-->
-<nav class="navbar navbar-expand-lg navbar-inverse">
-  <a class="navbar-brand" routerLink="/"><i>Ciarán Melarkey</i></a>
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarNav"
-  >
-    <i class="bi bi-justify" style="color: #ffffff; font-size: 30px"></i>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/about"
-          ><b
-            ><i class="fa-solid fa-address-card"></i
-            ><span class="nav-link-text"> About</span></b
-          ></a
+<div>
+  <footer>
+    <p class="footer-copyright">© Ciarán Melarkey - 2022</p>
+    <ul class="footer-menu">
+      <li class="footer-items">
+        <a href="https://github.com/Ciaran98" target="_blank">GitHub</a>
+      </li>
+      <li class="footer-items">
+        <a
+          href="https://www.linkedin.com/in/ciaran-melarkey-694469194/"
+          target="_blank"
+          >LinkedIn</a
         >
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link" routerLink="/projects"
-          ><b
-            ><i class="fa-solid fa-list-check"></i
-            ><span class="nav-link-text"> Projects</span></b
-          ></a
-        >
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/code"
-          ><b
-            ><i class="bi bi-code-slash"></i
-            ><span class="nav-link-text"> Code Examples</span></b
-          ></a
-        >
-      </li>
+      <li class="footer-items">Email</li>
     </ul>
-  </div>
-</nav>
-<router-outlet></router-outlet>
-
-<footer class="footer">
-  <ul class="footer-padding footer-flex">
-    <li class="footer-item">
-      <a
-        class="btn"
-        href="https://github.com/Ciaran98"
-        role="button"
-        target="_blank"
-        ><i class="bi bi-github footer-icon"></i>
-      </a>
-    </li>
-    <li class="footer-item">
-      <a
-        class="btn"
-        href="https://www.linkedin.com/in/ciaran-melarkey-694469194/"
-        role="button"
-        target="_blank"
-        ><i class="bi bi-linkedin footer-icon"></i>
-      </a>
-    </li>
-    <li class="footer-item">
-      <a class="btn" href="mailto:ciaran.melarkey@hotmail.com" role="button"
-        ><i class="bi bi-envelope-fill footer-icon"></i>
-      </a>
-    </li>
-  </ul>
-</footer>
+  </footer>
+</div>

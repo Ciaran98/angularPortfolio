@@ -1,117 +1,30 @@
 <div class="about-page">
-  <div class="about-content py-4">
-    <h1 class="display-4 d-flex fw-bold" style="color: #242423">
-      <div class="text-pointer-first"></div>
-      <!-- This section is for the animation of text being written -->
-      <span class="anim-less-than">&lt;</span>
-      <span class="anim-A">A</span>
-      <span class="anim-b">b</span>
-      <span class="anim-o">o</span>
-      <span class="anim-u">u</span>
-      <span class="anim-t">t</span>
-      <span class="anim-space">&nbsp;</span>
-      <span class="anim-M">M</span>
-      <span class="anim-e">e</span>
-      <span class="anim-back-slash">/</span>
-      <span class="anim-greater-than">&gt;</span>
-      &nbsp;
-      <div class="text-pointer-last"></div>
-    </h1>
-    <h2 class="fact-header">Some Facts about me!</h2>
-    <p class="about-description">
-      I wrote my first code in 2012. I was first starting to discover my love of
-      computers and technology back then, and I wanted to get started on
-      learning some of the basics of coding. I wrote some very basic Java code
-      in Eclipse, and created a modifcation for the game Minecraft. I created a
-      new set of tools for the player to use, and a new Ore for the players to
-      find and mine.
-      <br />
-      I was able to successfully diagnose and repair issues with computers. I
-      have had to install drivers, and check for faulty computer components. I
-      was also the child in the family that would be asked for help relating to
-      any issues with computers.
-      <br />
-      I am always seeking new challenges and experiences that will help me grow
-      to become a better developer. When starting a new project, I look for
-      technologies or languages that are new or popular. I always keep myself
-      up-to-date with the latest and greatest in tech.
-      <br />
-      I Graduated with Bachelor's Degree in Computer Science from Letterkenny
-      Institute of technology. I completed many modules that cover all aspects
-      of computer science. Software Development, Web Development, Networking,
-      Data Science, you name it, I've probably covered it.
+  <div class="about-container">
+    <h1 class="about-header">About Me.</h1>
+    <span class="about-text about-intro"
+      >Hello! My name is Ciarán Melarkey.</span
+    >
+    <p class="about-text">
+      I am a computer science graduate from the Letterkenny Institute of
+      Technology! In my spare time I enjoy working on my own projects, reading,
+      learning, and gaming. I enjoy working on fullstack web projects, and my
+      preferred tools are Vue.js, Node.js, and Express.
     </p>
-    <!--Languages section-->
-    <h2 class="text-center">I am experienced with these languages</h2>
-    <div class="row justify-content-center text-center">
-      <div class="col-3 skill blue">
-        <img src="../../assets/typescript.png" alt="typescript" />
-        <hr />
-        <p>TypeScript</p>
-      </div>
-
-      <div class="col-3 skill javascript">
-        <img src="../../assets/javascript.png" alt="javascript" />
-        <hr />
-        <p>JavaScript</p>
-      </div>
-      <div class="col-3 skill orange">
-        <img src="../../assets/html.png" alt="HTML" />
-        <hr />
-        <p>HTML</p>
-      </div>
-      <div class="col-3 skill blue">
-        <img src="../../assets/css.png" alt="CSS" />
-        <hr />
-        <p>CSS</p>
-      </div>
-    </div>
-    <div class="row justify-content-center text-center">
-      <div class="col-4 skill orange">
-        <img src="../../assets/java.png" alt="java" />
-        <hr />
-        <p>Java</p>
-      </div>
-      <div class="col-4 skill blue">
-        <img src="../../assets/python.png" alt="python" />
-        <hr />
-        <p>Python</p>
-      </div>
-      <div class="col-4 skill orange">
-        <img src="../../assets/sql.png" alt="php" />
-        <hr />
-        <p>SQL</p>
-      </div>
-    </div>
-    <!--Technologies Section-->
-    <h2 class="text-center">I am experienced with these technologies</h2>
-    <div class="row justify-content-center text-center">
-      <div class="col-4 skill angular">
-        <img src="../../assets/angular.png" alt="Angular" />
-        <hr />
-        <p>Angular</p>
-      </div>
-      <div class="col-4 skill bootstrap">
-        <img src="../../assets/bootstrap.png" alt="bootstrap" />
-        <hr />
-        <p>BootStrap</p>
-      </div>
-      <div class="col-4 skill node">
-        <img src="../../assets/node.png" alt="node" />
-        <hr />
-        <p>Node</p>
-      </div>
-    </div>
-    <div class="row justify-content-center text-center">
-      <div class="col-6 skill blue">
-        <img src="../../assets/mysql.png" alt="mySql" />
-        <hr />
-        <p>MySql</p>
-      </div>
-      <div class="col-6 skill orange">
-        <img src="../../assets/git.png" alt="git" />
-        <hr />
-        <p>Git</p>
+  </div>
+  <div class="skills-container-wrapper">
+    <div class="skills-container">
+      <h2 class="skills-header">What I'm familiar with.</h2>
+      <p class="skills-text">I work with the following tools and languages.</p>
+      <div class="showcase-wrapper">
+        <div class="skill-showcase-box" *ngFor="let tech of techList">
+          <img
+            class="skill-showcase-image"
+            src="../../assets/{{ tech.toLowerCase() }}.png"
+            alt="Icon for {{ tech }}"
+          />
+          <hr />
+          <h3 class="showcase-text">{{ tech }}</h3>
+        </div>
       </div>
     </div>
   </div>

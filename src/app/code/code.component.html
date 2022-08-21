@@ -1,4 +1,4 @@
-<div class="code-page">
+<!--<div class="code-page">
   <div class="code-content">
     <h1>&#123;Code Examples&#125;</h1>
     <p>
@@ -27,5 +27,36 @@
       #snippetbox
       [innerHTML]="selectedsnippet"
     ></div>
+  </div>
+</div>-->
+<div class="code-page">
+  <div class="code-container">
+    <h1 class="code-header">Code Examples</h1>
+    <p class="code-text">
+      On this page you will find examples of code that I have previously
+      written.
+    </p>
+    <form
+      #snippetform="ngForm"
+      (change)="selectsnippet(snippetform, snippetbox)"
+    >
+      <select id="select" ngModel #select="ngModel" name="snippetSelect">
+        <option
+          *ngFor="let options of snippetdata"
+          value="{{ options['index'] }}"
+        >
+          {{ options["name"] }}
+        </option>
+      </select>
+    </form>
+    <div class="snippet-wrapper">
+      <div
+        class="snippet-box"
+        style=""
+        #snippetbox
+        [innerHTML]="selectedsnippet"
+      ></div>
+      <p class="snippet-text">{{ snippetDescription }}</p>
+    </div>
   </div>
 </div>
