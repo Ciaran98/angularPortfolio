@@ -8,20 +8,25 @@ import { BlogComponent } from './blog/blog.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectDisplayComponent } from './project-display/project-display.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 const routes: Routes = [
-  {path:"about", component:AboutComponent},
-  {path:"",component:HomeComponent},
-  {path:"login",component:LoginComponent},
-  {path:"code",component:CodeComponent,data:{title:'Code'}},
-  {path:"blog",component:BlogComponent},
-  {path:"blog_post/:id",component:BlogPostComponent},
-  {path:"projects",component:ProjectsComponent},
-  {path:"project/:id",component:ProjectDisplayComponent}
+  { path: 'about', component: AboutComponent },
+  { path: '', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'code', component: CodeComponent, data: { title: 'Code' } },
+  { path: 'blog', component: BlogComponent },
+  { path: 'blog_post/:id', component: BlogPostComponent },
+  { path: 'projects', component: ProjectsComponent },
+  { path: 'project/:id', component: ProjectDisplayComponent },
+  { path: '**', pathMatch: 'full', component: PagenotfoundComponent },
 ];
 @NgModule({
-  imports: [RouterModule.forRoot(routes,{
-    onSameUrlNavigation: 'reload'
-  })],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes, {
+      onSameUrlNavigation: 'reload',
+    }),
+  ],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { } export const RoutingComponent = [AboutComponent];
+export class AppRoutingModule {}
+export const RoutingComponent = [AboutComponent];

@@ -19,6 +19,13 @@
   font-family: "lora", "serif";
   font-weight: 500;
 }
+.project-link {
+  font-family: "lora", "serif";
+  font-size: 26px;
+}
+.project-link:hover {
+  font-weight: normal;
+}
 .project-header {
   animation: slideIn 0.5s;
 }

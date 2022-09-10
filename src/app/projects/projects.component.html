@@ -16,7 +16,13 @@
             showcase.name.toLowerCase()
           }}-project-image.png&quot;);"
         >
-          <h2 class="showcase-header">{{ showcase.name }}</h2>
+          <div class="showcase-header">
+            <a
+              class="project-link"
+              routerLink="/project/{{ showcase.name.split(' ').join('') }}"
+              >{{ showcase.name }}</a
+            >
+          </div>
         </div>
         <div class="showcase-content-wrapper">
           <p class="showcase-text">{{ showcase.description }}</p>

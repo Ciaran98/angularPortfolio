@@ -30,8 +30,10 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('hamburger') hamburger: any;
   @ViewChild('navMenu') navMenu: any;
   @ViewChild('navContainer') navContainer: any;
+  @ViewChild('brand') brand: any;
   hamburgerClick: Subscription = new Subscription();
   navItemClick: Subscription = new Subscription();
+  brandClick: Subscription = new Subscription();
   title = 'Ciaran Web app';
   ngOnInit() {}
   public ngAfterViewInit(): void {
@@ -59,9 +61,17 @@ export class AppComponent implements AfterViewInit {
       this.navMenu.nativeElement.classList.remove('active');
       this.navContainer.nativeElement.classList.remove('active');
     });
+    this.brandClick = fromEvent(this.brand.nativeElement, 'click').subscribe(
+      () => {
+        this.hamburger.nativeElement.classList.remove('active');
+        this.navMenu.nativeElement.classList.remove('active');
+        this.navContainer.nativeElement.classList.remove('active');
+      }
+    );
   }
   ngOnDestroy() {
     // add this for performance reason
     this.hamburgerClick.unsubscribe();
+    this.navItemClick.unsubscribe();
   }
 }

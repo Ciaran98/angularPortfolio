@@ -32,6 +32,7 @@ pre.snip-box {
   flex-direction: column;
   background-color: #181818;
   min-height: 83.2vh;
+  max-height: auto;
 }
 .code-container {
   width: 80%;
@@ -39,8 +40,8 @@ pre.snip-box {
   padding: 10px 20px;
   background-color: #252525;
   border-radius: 1px;
-  height: 100%;
   opacity: 0;
+  flex-grow: 1;
   animation: slideIn 0.7s forwards;
 }
 .code-header {
@@ -73,6 +74,13 @@ form {
   background-color: #141925;
   border-radius: 2px;
   overflow: auto;
+  padding: 10px;
+}
+.snippet-hidden {
+  display: none;
+}
+.animate-snip-box-inital {
+  animation: openBox 0.7s forwards;
 }
 @media (max-width: 768px) {
   .code-text {
@@ -87,5 +95,16 @@ form {
   to {
     opacity: 1;
     transform: translate(0, 0);
+  }
+}
+
+@keyframes openBox {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: 300px;
   }
 }

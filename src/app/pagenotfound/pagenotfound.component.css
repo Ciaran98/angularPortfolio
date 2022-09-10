@@ -1,10 +1,11 @@
-.projectdisplay-page {
+.notfound-page {
   min-height: 84.8vh;
   display: flex;
   flex-direction: column;
   background-color: #181818;
+  gap: 25px;
 }
-.projectdisplay-container {
+.notfound-container {
   padding: 10px 20px;
   margin: 0px auto 25px;
   background-color: #252525;
@@ -13,11 +14,10 @@
   margin: 25px auto;
   flex-grow: 1;
 }
-.projectdisplay-header {
+.notfound-header {
   font-family: "lora", "serif";
   font-weight: 500;
 }
-.projectdisplay-text {
+.notfound-text {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 18px;
 }
