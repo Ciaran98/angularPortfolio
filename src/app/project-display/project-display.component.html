@@ -7,9 +7,29 @@
       {{ projects[id.toLowerCase()]["tagline"] }}
     </p>
     <h2 class="projectdisplay-header">Development</h2>
-    <p *ngFor="let sentence of projects[id.toLowerCase()]['development']" class="projectdisplay-text" style="white-space: pre-line">
-      {{sentence}}
+    <p
+      *ngFor="let sentence of projects[id.toLowerCase()]['development']"
+      class="projectdisplay-text"
+      style="white-space: pre-line"
+    >
+      {{ sentence }}
     </p>
     <h2 class="projectdisplay-header">Gallery</h2>
+    <div class="projectdisplay-gallery">
+      <img
+        class="gallery-image"
+        *ngFor="let image of projects[id.toLowerCase()]['images']"
+        src="../../assets/{{ image }}"
+        alt="Vinyle Image"
+        (click)="selectImage($event)"
+      />
+    </div>
+  </div>
+</div>
+<div class="gallery-modal hidden" #imageModal (click)="closeModal()">
+  <span class="closeModal" (click)="closeModal()">Close</span>
+  <div class="gallery-image-wrapper" >
+  
+    <img class="modal-image" src="{{ galleryImageModal }}" alt="modal image" (click)="$event.stopPropagation()" />
   </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Renderer2 } from '@angular/core';
 @Component({
@@ -13,6 +13,7 @@ export class ProjectDisplayComponent implements OnInit {
   public projecttext: string = '';
   public projecttitle: string = '';
   public projecturl: string = '';
+  public galleryImageModal: string ='';
   public projects = {
     vinyle: {
       title: 'Vinyle',
@@ -36,15 +37,34 @@ export class ProjectDisplayComponent implements OnInit {
           'On a new game being available, the local storage that contains the previously played game is wiped.',
           'A results screen is displayed when a user has completed the latest game. This screen will display a modal, that will contain the user\'s results from today\'s game.'
       ],
+      images:["vinyle-project-image-1.PNG","vinyle-project-image-2.PNG","vinyle-project-image-3.PNG","vinyle-project-image-4.PNG"]
     },
     imagetobraille: {
       title: 'Image to Braille',
       tagline: 'This is the tagline for image to braille',
-      development: 'this is how image to braille was developed',
+      development: ['this is how image to braille was developed'],
+      images:["imagetobraille-project-image-1.PNG","imagetobraille-project-image-2.PNG"]
     },
+    apexrandomiser:{
+      title: 'Apex Randomiser',
+      tagline: 'This is the tagline for apex randomiser',
+      development: ['this is how apex randomiser was developed'],
+      images:["apexrandomiser-project-image-1.PNG","apexrandomiser-project-image-2.PNG","apexrandomiser-project-image-3.PNG"]
+    }
   };
   public projectDevelopment: string = '';
+  @ViewChild('imageModal') imageModal: any;
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id')!;
+  }
+  selectImage(e): void{
+    console.log(e['path'][0]['currentSrc']);
+    this.galleryImageModal = e['path'][0]['currentSrc'];
+    this.imageModal.nativeElement.classList.remove('hidden');
+    this.imageModal.nativeElement.classList.add('visible');
+  }
+  closeModal():void{
+    this.imageModal.nativeElement.classList.add('hidden');
+    this.imageModal.nativeElement.classList.remove('visible');
   }
 }

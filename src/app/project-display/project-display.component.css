@@ -17,7 +17,88 @@
   font-family: "lora", "serif";
   font-weight: 500;
 }
+h1.projectdisplay-header{
+  font-size: 40px
+}
 .projectdisplay-text {
   font-family: "Josefin Sans", sans-serif;
   font-size: 18px;
+}
+.projectdisplay-gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  gap: 25px;
+}
+.gallery-image {
+  height: 150px;
+  width: auto;
+}
+.gallery-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.89);
+  animation: fadein 0.7s;
+}
+.gallery-image:hover {
+  cursor: pointer;
+}
+.modal-image {
+  width: 1000px;
+  height: auto;
+  border-radius: 7px;
+  animation: slidedown 0.7s;
+}
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
+}
+.gallery-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.closeModal {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  font-family: "lora", "serif";
+  cursor: pointer;
+}
+body{
+}
+@media (max-width: 768px) {
+  .modal-image {
+    width: 95%;
+  }
+  .gallery-image{
+    width: auto;
+    height: 80px;
+  }
+  .projectdisplay-gallery{
+    gap: 10px;
+  }
+}
+@keyframes slidedown {
+  from {
+    transform: translateY(-1000px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes fadein {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: rgba(34, 34, 34, 0.89);
+  }
 }
